@@ -4,6 +4,8 @@ docker run --name some-guacamole  -d -p 8080:8080 guacamole/guacamole
 
 docker container ls
 
+
+
 docker-compose -f install.yml down
 
 docker-compose -f install.yml up -d
@@ -13,3 +15,12 @@ http://localhost:8080/guacamole
 
 
 default administrative user called "guacadmin" with the password "guacadmin"
+
+docker exec -it guacamole_guacd_1 bash
+
+docker logs guacamole_guacd_1
+
+broadwayd :5 
+GDK_BACKEND=broadway BROADWAY_DISPLAY=:5 gtk3-demo
+GDK_BACKEND=broadway BROADWAY_DISPLAY=:5 gnome-calculator
+
